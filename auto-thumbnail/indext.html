@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Thumbnail</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="./js/apikey.js"></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap_container">
+      <h1># Auto Thumbnail</h1>
+      <div class="preview_container">
+        <h2 class="preview_title">제목을 입력하세요.</h2>
+        <h3 class="preview_subtitle">부제목을 입력하세요.</h3>
+      </div>
+      <div class="control_container">
+        <dl>
+          <dt>텍스트 입력</dt>
+          <dd>
+            <input
+              type="text"
+              class="input_title"
+              placeholder="제목을 입력하세요."
+            />
+          </dd>
+          <dd>
+            <input
+              type="text"
+              class="input_subtitle"
+              placeholder="부제목을 입력하세요."
+            />
+          </dd>
+        </dl>
+        <dl>
+          <dt>텍스트 반전</dt>
+          <dd>
+            <button type="button" class="button_reverse black">Black</button>
+          </dd>
+        </dl>
+        <dl>
+          <dt>배경 선택</dt>
+          <dd>
+            <button
+              type="button"
+              class="button_opt"
+              data-set="color"
+              onclick="handleColor('solid');"
+            >
+              랜덤 단색
+            </button>
+          </dd>
+          <dd>
+            <button
+              type="button"
+              class="button_opt"
+              data-set="color"
+              onclick="handleColor('gradient');"
+            >
+              랜덤 그라데이션
+            </button>
+          </dd>
+          <dd>
+            <button type="button" class="button_opt" data-set="image">
+              Unsplash 이미지
+            </button>
+          </dd>
+        </dl>
+        <dl>
+          <dd>
+            <button type="button" class="button_init" onclick="init();">
+              초기화
+            </button>
+            <button
+              type="button"
+              class="button_download"
+              onclick="handleDownload();"
+            >
+              다운로드
+            </button>
+          </dd>
+        </dl>
+      </div>
+      <a id="downloadTarget" style="display: none"></a>
+    </div>
+    <div class="dimm_container"></div>
+  </body>
+</html>

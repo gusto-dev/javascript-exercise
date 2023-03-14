@@ -1,0 +1,104 @@
+.goslider-container {
+  position: relative;
+  max-width: 720px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.goslider-container img {
+  max-width: 100%;
+}
+
+.goslider-draggable {
+  overflow: hidden;
+}
+
+.goslider-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+.goslider-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.goslider-controls {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 100%;
+}
+.goslider-controls button {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  text-indent: -9999px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.goslider-controls-prev {
+  left: -40px;
+  background-image: url("../img/icon_arrow_prev.svg");
+}
+.goslider-controls-next {
+  right: -40px;
+  background-image: url("../img/icon_arrow_next.svg");
+}
+
+.goslider-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.goslider-pagination-button {
+  width: 10px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2px;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  background: gray;
+  border-radius: 50%;
+}
+.goslider-pagination-button-current {
+  background: blueviolet;
+}
